@@ -21,7 +21,7 @@ export const BtnSuccess = () => {
     };
 
     return (
-        <Button onPress={() => onBtnClick()} title='Learn More' />
+        <Button onPress={() => onBtnClick()} title='Learn More' styles={touchStyle} />
     );
 };
 

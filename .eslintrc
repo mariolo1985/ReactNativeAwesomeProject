@@ -4,19 +4,21 @@
         "browser": true
     },
     "parser": "babel-eslint",
-    "rules": { // comma stuff
+    "rules": {
         "comma-dangle": [
             "error",
             "never"
-        ],
-        // for indent types
+        ], // comma stuff
+        "import/prefer-default-export": 0, // We don't actually prefer default exports
         "indent": [
             "error",
             4
+        ], // for indent types
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
         ],
-        // something with LF and CRLF formating
-        "linebreak-style": 0,
-        // allow jsx in files with .js
+        "linebreak-style": 0, // something with LF and CRLF formating
         "react/jsx-filename-extension": [
             1,
             {
@@ -25,15 +27,11 @@
                     ".jsx"
                 ]
             }
-        ],
+        ], // allow jsx in files with .js
         "react/jsx-indent": [
             2,
             4
-        ], // more indent stuff?
-        "jsx-quotes": [
-            "error",
-            "prefer-single"
-        ]
+        ] // more indent stuff?
     },
     "settings": {
         "import/parser": "babel-eslint"

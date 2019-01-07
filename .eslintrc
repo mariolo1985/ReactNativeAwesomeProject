@@ -26,11 +26,10 @@
                 ]
             }
         ],
-        // more indent stuff?
         "react/jsx-indent": [
-            true,
-            12
-        ],
+            2,
+            4
+        ], // more indent stuff?
         "jsx-quotes": [
             "error",
             "prefer-single"

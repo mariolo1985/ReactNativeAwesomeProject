@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View } from 'react-native';
+import {
+    AppRegistry,
+    Text,
+    TextInput,
+    View
+} from 'react-native';
 
 class TextTranslator extends Component {
     constructor(props) {
@@ -13,19 +18,16 @@ class TextTranslator extends Component {
     onTextChange = (text) => {
         this.setState({
             userText: text
-        })
+        });
     }
 
     render() {
+        const { userText } = this.state;
         return (
             <View style={{ padding: 10 }}>
-                <TextInput
-                    style={{ height: 40 }}
-                    placeholder='Placeholder text here'
-                    onChangeText={(text) => this.onTextChange(text)}
-                />
+                <TextInput style={{ height: 40 }} placeholder='Placeholder text here' onChangeText={text => this.onTextChange(text)} />
                 <Text style={{ fontSize: 36 }}>
-                    {this.state.userText}
+                    {userText}
                 </Text>
             </View>
         );

@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
-import HelloWorld from './components/HelloWorld/HelloWorld';
-import ImageComponent from './components/NativeComponents/ImageComponent/ImageComponent';
+
+import { BtnSuccess, BtnTouchableHighlight, BtnTouchableNativeFeedback, BtnTouchableOpacity, BtnTouchableWithoutFeedback } from './components/Buttons/CustomButtons';
 import FixedDimensions from './components/Size/FixedDimensions';
 import FlexDimensions from './components/Size/FlexDimensions';
+import HelloWorld from './components/HelloWorld/HelloWorld';
+import ImageComponent from './components/NativeComponents/ImageComponent/ImageComponent';
 import TextTranslator from './components/Text/TextTranslator';
 
 const App = () => (
@@ -12,6 +14,11 @@ const App = () => (
 		<FixedDimensions />
 		<FlexDimensions />
 		<TextTranslator />
+		<BtnSuccess />
+		<BtnTouchableHighlight />
+		<BtnTouchableNativeFeedback />
+		<BtnTouchableOpacity />
+		<BtnTouchableWithoutFeedback />
 	</Fragment>
 );
 

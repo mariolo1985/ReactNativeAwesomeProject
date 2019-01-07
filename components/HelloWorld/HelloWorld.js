@@ -6,9 +6,15 @@ import {
 
 class HelloWorldApp extends Component {
 	render() {
+		const style = {
+			color: 'blue',
+			fontSize: 36,
+			fontWeight: '600'
+		};
+
 		return (
 			<View>
-				<Text>Hello World</Text>
+				<Text style={style}>Hello World</Text>
 			</View>
 		);
 	}

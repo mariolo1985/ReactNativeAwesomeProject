@@ -6,15 +6,16 @@ class ImageComponent extends Component {
         const pic = {
             uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
         };
+
+        const style = {
+            height: 110,
+            width: 193
+        };
+
         return (
             <Image
                 source={pic}
-                style={
-                    {
-                        height: 110,
-                        width: 193
-                    }
-                } />
+                style={style} />
         );
     }
 }

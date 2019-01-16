@@ -1,8 +1,8 @@
 import React from 'react';
-import AppLoader from './AppLoader';
+import AppLoaderNavigation from './AppLoaderNavigation';
 
 const App = () => (
-	<AppLoader />
+    <AppLoaderNavigation />
 );
 
 export default App;

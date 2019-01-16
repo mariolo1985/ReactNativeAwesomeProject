@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Animated, Button, Text, View } from 'react-native';
 
 class HomeScreen extends Component {
     static navigationOptions = ({ navigation }) => {
@@ -26,7 +26,9 @@ class HomeScreen extends Component {
 
 
         this.state = {
-            count: 0
+            count: 0,
+            fadeAnim: new Animated.Value(0),
+            yPosition: new Animated.Value(0)
         };
     }
 
@@ -37,9 +39,29 @@ class HomeScreen extends Component {
         });
     }
 
+    componentDidMount = () => {
+        const { fadeAnim, yPosition } = this.state;
+        Animated.sequence([
+            Animated.timing(
+                fadeAnim,
+                {
+                    duration: 2000,
+                    toValue: 1
+                }
+            ),
+            Animated.timing(
+                yPosition,
+                {
+                    duration: 2000,
+                    toValue: 50
+                }
+            )
+        ]).start();
+    }
+
     render() {
         const { navigate } = this.props.navigation;
-        const { count } = this.state;
+        const { count, fadeAnim, yPosition } = this.state;
         return (
 
             <View>
@@ -47,7 +69,14 @@ class HomeScreen extends Component {
                 <Text>
                     {count}
                 </Text>
-                <Button onPress={() => navigate('Detail')} title='Add Details' />
+                <Animated.View
+                    style={{
+                        opacity: fadeAnim,
+                        top: yPosition
+                    }}
+                >
+                    <Button onPress={() => navigate('Detail')} title='Add Details' />
+                </Animated.View>
             </View>
         );
     }

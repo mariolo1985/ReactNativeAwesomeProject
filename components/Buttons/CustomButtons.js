@@ -79,8 +79,24 @@ export const BtnTouchableWithoutFeedback = () => {
     );
 };
 
+// Real custom
+export const BtnLink = ({
+    text,
+    onBtnClick
+}) => (
+        <TouchableHighlight
+            onPress={() => onBtnClick()}
+            title='Learn More'
+            style={touchStyle}
+        >
+            <Text style={{ color: '#0485cc' }}>{text}</Text>
+        </TouchableHighlight>
+    );
+
 AppRegistry.registerComponent('AwesomeProject', () => BtnSuccess);
 AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableHighlight);
 AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableNativeFeedback);
 AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableOpacity);
 AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableWithoutFeedback);
+
+AppRegistry.registerComponent('AwesomeProject', () => BtnLink);

@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import {
+    AppRegistry,
+    Button,
+    Text,
+    TextInput,
+    View
+} from 'react-native';
 
 const Title = () => (
     <Text>
@@ -25,9 +31,13 @@ class DetailScreen extends Component {
 
             <View>
                 <Text>Details Screen</Text>
+                <TextInput
+                    placeholder='Enter text here'
+                />
             </View>
         );
     }
 }
 
+AppRegistry.registerComponent('AwesomeProject', () => DetailScreen);
 export default DetailScreen;

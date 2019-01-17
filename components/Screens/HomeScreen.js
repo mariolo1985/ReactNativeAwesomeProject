@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Animated, Button, Text, View } from 'react-native';
+import {
+    AppRegistry,
+    Animated,
+    Button,
+    Text,
+    View
+} from 'react-native';
 
 class HomeScreen extends Component {
     static navigationOptions = ({ navigation }) => {
@@ -62,8 +68,8 @@ class HomeScreen extends Component {
     render() {
         const { navigate } = this.props.navigation;
         const { count, fadeAnim, yPosition } = this.state;
-        return (
 
+        return (
             <View>
                 <Text>Home Screen</Text>
                 <Text>
@@ -76,10 +82,12 @@ class HomeScreen extends Component {
                     }}
                 >
                     <Button onPress={() => navigate('Detail')} title='Add Details' />
+                    <Button onPress={() => navigate('Everything')} title='Go To Everything' />
                 </Animated.View>
             </View>
         );
     }
 }
 
+AppRegistry.registerComponent('AwesomeProject', () => HomeScreen);
 export default HomeScreen;

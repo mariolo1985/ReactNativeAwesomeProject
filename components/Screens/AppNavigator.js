@@ -3,6 +3,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 import EverythingScreen from './EverythingScreen';
+import FetchScreen from './FetchScreen';
 
 const AppNavigator = createStackNavigator(
     {
@@ -14,6 +15,9 @@ const AppNavigator = createStackNavigator(
         },
         Everything: {
             screen: EverythingScreen
+        },
+        Fetch: {
+            screen: FetchScreen
         }
     },
     {

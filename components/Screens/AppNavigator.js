@@ -2,6 +2,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
+import EverythingScreen from './EverythingScreen';
 
 const AppNavigator = createStackNavigator(
     {
@@ -10,6 +11,9 @@ const AppNavigator = createStackNavigator(
         },
         Detail: {
             screen: DetailScreen
+        },
+        Everything: {
+            screen: EverythingScreen
         }
     },
     {

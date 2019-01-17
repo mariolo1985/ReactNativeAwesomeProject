@@ -7,20 +7,20 @@ import {
     View
 } from 'react-native';
 
+import { BtnLink } from '../Buttons/CustomButtons';
+
 class HomeScreen extends Component {
-    static navigationOptions = ({ navigation }) => {
-        return {
-            title: 'Home',
-            headerRight:
-                (
-                    <Button
-                        onPress={(navigation.getParam('increaseCount'))}
-                        title='+1'
-                        color='#fff'
-                    />
-                )
-        };
-    }
+    static navigationOptions = ({ navigation }) => ({
+        title: 'Home',
+        headerRight:
+            (
+                <Button
+                    onPress={(navigation.getParam('increaseCount'))}
+                    title='+1'
+                    color='#fff'
+                />
+            )
+    })
 
     constructor(props) {
         super(props);
@@ -81,8 +81,9 @@ class HomeScreen extends Component {
                         top: yPosition
                     }}
                 >
-                    <Button onPress={() => navigate('Detail')} title='Add Details' />
-                    <Button onPress={() => navigate('Everything')} title='Go To Everything' />
+                    <BtnLink text='Add Details' onBtnClick={() => navigate('Detail')} />
+                    <BtnLink text='Go To Everything' onBtnClick={() => navigate('Everything')} />
+                    <BtnLink text='Fetcher' onBtnClick={() => navigate('Fetch')} />
                 </Animated.View>
             </View>
         );

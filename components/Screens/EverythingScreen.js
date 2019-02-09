@@ -41,5 +41,4 @@ const EverythingScreen = () => (
     </ScrollView>
 );
 
-AppRegistry.registerComponent('AwesomeProject', () => EverythingScreen);
 export default EverythingScreen;

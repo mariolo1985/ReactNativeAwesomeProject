@@ -49,5 +49,4 @@ class FetchScreen extends Component {
     }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => FetchScreen);
 export default FetchScreen;

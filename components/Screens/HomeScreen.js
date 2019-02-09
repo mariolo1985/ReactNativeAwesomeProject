@@ -90,5 +90,4 @@ class HomeScreen extends Component {
     }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => HomeScreen);
 export default HomeScreen;

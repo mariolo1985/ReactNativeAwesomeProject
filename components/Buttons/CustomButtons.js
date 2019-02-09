@@ -93,10 +93,3 @@ export const BtnLink = ({
         </TouchableHighlight>
     );
 
-AppRegistry.registerComponent('AwesomeProject', () => BtnSuccess);
-AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableHighlight);
-AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableNativeFeedback);
-AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableOpacity);
-AppRegistry.registerComponent('AwesomeProject', () => BtnTouchableWithoutFeedback);
-
-AppRegistry.registerComponent('AwesomeProject', () => BtnLink);

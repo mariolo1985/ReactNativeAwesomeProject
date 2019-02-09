@@ -66,5 +66,4 @@ const FlatCompList = () => (
     />
 );
 
-AppRegistry.registerComponent('AwesomeProject', () => FlatCompList);
 export default FlatCompList;

@@ -39,5 +39,4 @@ class DetailScreen extends Component {
     }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => DetailScreen);
 export default DetailScreen;

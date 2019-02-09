@@ -16,5 +16,4 @@ const ImageComponent = () => {
     );
 };
 
-AppRegistry.registerComponent('AwesomeProject', () => ImageComponent);
 export default ImageComponent;

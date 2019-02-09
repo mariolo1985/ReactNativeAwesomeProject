@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-import { Animated, Button, Text, View } from 'react-native';
+import {
+    AppRegistry,
+    Animated,
+    Button,
+    Text,
+    View
+} from 'react-native';
+
+import { BtnLink } from '../Buttons/CustomButtons';
 
 class HomeScreen extends Component {
-    static navigationOptions = ({ navigation }) => {
-        return {
-            title: 'Home',
-            headerRight:
-                (
-                    <Button
-                        onPress={(navigation.getParam('increaseCount'))}
-                        title='+1'
-                        color='#fff'
-                    />
-                )
-        };
-    }
+    static navigationOptions = ({ navigation }) => ({
+        title: 'Home',
+        headerRight:
+            (
+                <Button
+                    onPress={(navigation.getParam('increaseCount'))}
+                    title='+1'
+                    color='#fff'
+                />
+            )
+    })
 
     constructor(props) {
         super(props);
@@ -62,8 +68,8 @@ class HomeScreen extends Component {
     render() {
         const { navigate } = this.props.navigation;
         const { count, fadeAnim, yPosition } = this.state;
-        return (
 
+        return (
             <View>
                 <Text>Home Screen</Text>
                 <Text>
@@ -75,7 +81,9 @@ class HomeScreen extends Component {
                         top: yPosition
                     }}
                 >
-                    <Button onPress={() => navigate('Detail')} title='Add Details' />
+                    <BtnLink text='Add Details' onBtnClick={() => navigate('Detail')} />
+                    <BtnLink text='Go To Everything' onBtnClick={() => navigate('Everything')} />
+                    <BtnLink text='Fetcher' onBtnClick={() => navigate('Fetch')} />
                 </Animated.View>
             </View>
         );

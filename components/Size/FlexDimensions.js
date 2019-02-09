@@ -9,6 +9,4 @@ const FlexDimensions = () => (
     </View>
 );
 
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => FlexDimensions);
 export default FlexDimensions;

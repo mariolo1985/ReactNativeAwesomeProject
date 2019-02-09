@@ -34,5 +34,4 @@ class TextTranslator extends Component {
     }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => TextTranslator);
 export default TextTranslator;

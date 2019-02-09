@@ -9,6 +9,4 @@ const FixedDimensions = () => (
     </View>
 );
 
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => FixedDimensions);
 export default FixedDimensions;

@@ -1,9 +1,10 @@
 {
-  "name": "AwesomeProject",
+  "name": "awesomeproject",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run:android":"react-native run-android",
     "test": "jest",
     "lint": "eslint components"
   },
